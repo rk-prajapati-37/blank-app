@@ -13,8 +13,19 @@ def show_home():
         st.markdown('<p class="custom-description">a passionate and seasoned web developer who holds a BSc in Computer Science from Mumbai University. With a focus on creating clean, responsive, and user-friendly websites, I bring a wealth of experience and expertise in WordPress, HTML, CSS, PHP, and JavaScript.</p>', unsafe_allow_html=True)
         st.markdown('<p class="custom-description">Having had the privilege of contributing to reputable organizations, I am now excited to extend my services as a freelance web developer. My career has been shaped by a commitment to delivering high-quality, customized solutions.</p>', unsafe_allow_html=True)
         # st.text("Having had the privilege of contributing to reputable organizations, I am now excited to extend my services as a freelance web developer. My career has been shaped by a commitment to delivering high-quality, customized solutions.")
-        st.button("Click Me")
+        # st.button("Click Me")
 
-    # Right Column - Profile Image
+        # Custom button using HTML
+        st.markdown('<a href="#about" class="custom-button link-item outer-shadow hover-in-shadow">More about Me</a>', unsafe_allow_html=True)
+
+    # Right Column - Profile Image with a surrounding div
     with col2:
-        st.image("data/home_img/profile-pic.png", caption="Your Name", use_column_width=True)
+        st.markdown(
+            """
+            <div class="image-container inner-shadow">
+                <img src="data/home_img/profile-pic.png" class="custom-image outer-shadow" alt="Placeholder Image">
+              
+            </div>
+            """,
+            unsafe_allow_html=True
+        )

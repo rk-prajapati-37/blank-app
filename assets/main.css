@@ -1,0 +1,37 @@
+/* styles.css */
+:root {
+  --bg-black-50: #eff0f8;
+  --skin-color: #c00;
+  --text-black-900: #000000;
+  --text-black-600: #666666;
+}
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  background-color: var(--bg-black-50);
+}
+
+.custom-title {
+  font-size: 55px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  margin: 0;
+}
+
+.custom-description {
+  color: var(--text-black-600);
+  font-size: 18px;
+  text-transform: math-auto;
+  margin: 20px 0;
+  line-height: 30px;
+}
+.sub-heading-txt {
+  font-weight: 600;
+  color: var(--skin-color);
+}
+ h1.designation-txt {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--skin-color);
+}

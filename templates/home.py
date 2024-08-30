@@ -22,6 +22,7 @@ def show_home():
             """
             <div class="image-container outer-shadow">
                 <img src="https://raw.githubusercontent.com/rk-prajapati-37/blank-app/main/data/home_img/profile-pic.png" class="custom-image inner-shadow " alt="Profile Image">
+
             </div>
             """,
             unsafe_allow_html=True

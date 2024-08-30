@@ -20,8 +20,28 @@ def load_css():
 # Load custom CSS
 load_css()
 
-# Sidebar Load Image
-st.sidebar.image('data/logo/logo.png', width=100)
+# Sidebar content with circular rotating text around static centered text
+st.sidebar.markdown("""
+    <div id="container">
+    <div id="circle">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 150" width="150" height="150" xml:space="preserve">
+            <defs>
+                <path id="circlePath" d="M 75, 75 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "/>
+            </defs>
+            <g>
+                <use xlink:href="#circlePath" fill="none"/>
+                <text fill="var(--text-black-900)">
+                    <textPath xlink:href="#circlePath">Web Designer & Developer • Web Designer & Developer • Web Designer & Developer •</textPath>
+                </text>
+            </g>
+        </svg>
+        <a href="index.html">
+            <div id="rk">R.K <hr class="rkhr"> Prajapati </div>
+        </a>
+    </div>
+</div>
+
+""", unsafe_allow_html=True)
 
 # Sidebar navigation
 st.sidebar.title("Navigation")

@@ -11,6 +11,7 @@ def show_home():
         st.markdown('<p class="custom-title">I am Rohit Prajapati</p>', unsafe_allow_html=True)
         st.markdown('<h1 class="designation-txt">( Web Designer & Developer )</h1>', unsafe_allow_html=True)
         st.markdown('<p class="custom-description">a passionate and seasoned web developer who holds a BSc in Computer Science from Mumbai University. With a focus on creating clean, responsive, and user-friendly websites, I bring a wealth of experience and expertise in WordPress, HTML, CSS, PHP, and JavaScript.</p>', unsafe_allow_html=True)
+        st.markdown('<h4 class="designation-txt">Freelance Availability:</h4>', unsafe_allow_html=True)
         st.markdown('<p class="custom-description">Having had the privilege of contributing to reputable organizations, I am now excited to extend my services as a freelance web developer. My career has been shaped by a commitment to delivering high-quality, customized solutions.</p>', unsafe_allow_html=True)
 
         # Custom button using HTML

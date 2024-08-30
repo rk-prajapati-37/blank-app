@@ -23,7 +23,7 @@ def show_home():
         st.markdown(
             """
             <div class="image-container inner-shadow">
-                <img src="data/home_img/profile-pic.png" class="custom-image outer-shadow" alt="Placeholder Image">
+                <img src="https://github.com/rk-prajapati-37/blank-app/blob/main/data/home_img/profile-pic.png" class="custom-image outer-shadow" alt="Placeholder Image">
               
             </div>
             """,

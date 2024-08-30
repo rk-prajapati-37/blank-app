@@ -27,13 +27,15 @@ a:hover, a:active {
   text-decoration: none;
 }
 
+
+/* Title code */
+
 .custom-title {
   font-size: 55px;
   font-weight: 700;
   color: var(--text-black-900);
   margin: 0;
 }
-
 .custom-description {
   color: var(--text-black-600);
   font-size: 18px;
@@ -51,30 +53,7 @@ a:hover, a:active {
   color: var(--skin-color);
 }
 
-
-
-
-.image-container {
-  max-width: 450px;
-  display: block;
-  margin: auto;
-  border-radius: 50%;
-  padding: 15px;
-}
-
-.inner-shadow {
-  box-shadow: var(--inner-shadow);
-}
-
-img.custom-image {
-  width: 100%;
-  border-radius: 50%;
-  border: 10px solid transparent;
-}
-.outer-shadow {
-  box-shadow: var(--outer-shadow);
-}
-
+/* button code */
 
 .custom-button {
   text-decoration: none;
@@ -91,6 +70,12 @@ img.custom-image {
   display: inline-block;
   border: none;
 }
+.outer-shadow {
+  box-shadow: var(--outer-shadow);
+}
+.inner-shadow {
+  box-shadow: var(--inner-shadow);
+}
 .hover-in-shadow {
   position: relative;
   z-index: 1;
@@ -98,12 +83,10 @@ img.custom-image {
 .hover-in-shadow:hover {
   box-shadow: var(--outer-shadow-0);
 }
-
 .hover-in-shadow:hover::after {
   box-shadow: var(--inner-shadow);
   border-radius: 30px;
 }
-
 .hover-in-shadow::after {
   content: "";
   position: absolute;
@@ -113,4 +96,59 @@ img.custom-image {
   height: 100%;
   transition: all 0.3s ease;
   z-index: -1;
+}
+
+/* Profile Image code */
+
+.image-container {
+  max-width: 450px;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  padding: 10px;
+}
+img.custom-image {
+  width: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+@keyframes border-spin {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.image-container {
+  width: 60vmin;
+  height: 60vmin;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* For inner image positioning */
+  overflow: hidden; /* Hide overflow to keep the border effect clean */
+}
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, var(--skin-color), var(--text-black-900), var(--skin-color), var(--text-black-900));
+  animation: border-spin 4s linear infinite;
+  z-index: 1; /* Behind the image */
+}
+
+.custom-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative; /* Keep image static */
+  z-index: 2; /* In front of the animated border */
 }
